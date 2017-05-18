@@ -11,16 +11,17 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(text):
-    result = re.findall(r'\b\w+', text)
-    quantity_of_words = Counter(result).most_common(10)
+    found_words = re.findall(r'\b\w+', text)
+    quantity_of_words = Counter(found_words).most_common(10)
     print('List of repeated words: ')
-    for word in quantity_of_words:
-        word_1 = word[0]
-        value = word[1]
-        print("Word '%s' repeated %d times." % (word_1, value))
+    for word_repeats in quantity_of_words:
+        word = word_repeats[0]
+        repeat_quantity = word_repeats[1]
+        print("Word '%s' repeated %d times." % (word, repeat_quantity))
 
 
 if __name__ == '__main__':
     filepath = input('Please enter way to txt file: ')
     text = load_data(filepath)
-
+    if text:
+        get_most_frequent_words(text)
