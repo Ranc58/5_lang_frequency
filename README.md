@@ -11,7 +11,7 @@ Run lang_frequency.py
 Example of script launch on Linux, python 3.5:
 
 ```
-$ python lang_frequency.py 
+$ python3 lang_frequency.py 
 # Please enter way to txt file: <path to file>
 List of repeated words: 
 Word 'to' repeated 10 times.
