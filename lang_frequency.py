@@ -20,7 +20,7 @@ def print_duplicate_words(quantity_of_duplicate_words):
     for word_repeats in quantity_of_duplicate_words:
         word = word_repeats[0]
         repeat_quantity = word_repeats[1]
-        print("Word '%s' repeated %d times." % (word, repeat_quantity))
+        print("Word '{}' repeated {} times." .format(word, repeat_quantity))
 
 
 if __name__ == '__main__':
