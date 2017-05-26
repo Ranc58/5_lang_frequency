@@ -10,7 +10,7 @@ def load_data(filepath):
 
 def get_most_frequent_words(text):
     words_count = 10
-    found_words = re.findall(r'\b\w+', text)
+    found_words = re.findall(r'\b\w+', text.lower())
     quantity_of_duplicate_words = Counter(found_words).most_common(words_count)
     return quantity_of_duplicate_words
 
